@@ -1,18 +1,49 @@
-import tkinter
-import os
+from abc import ABC, abstractmethod
+from organizm import Organizm
+#zwierzeta
+from symulacja.organizmy.zwierzeta.wilk import Wilk
+from symulacja.organizmy.zwierzeta.owca import Owca
+from symulacja.organizmy.zwierzeta.lis import Lis
+from symulacja.organizmy.zwierzeta.zolw import Zolw
+from symulacja.organizmy.zwierzeta.antylopa import Antylopa
+from symulacja.organizmy.zwierzeta.czlowiek import Czlowiek
+from symulacja.organizmy.zwierzeta.cyberowca import Cyberowca
+#rosliny
+from symulacja.organizmy.rosliny.trawa import Trawa
+from symulacja.organizmy.rosliny.mlecz import Mlecz
+from symulacja.organizmy.rosliny.guarana import Guarana
+from symulacja.organizmy.rosliny.jagody import Jagody
+from symulacja.organizmy.rosliny.barszcz import Barszcz
 
-class Swiat:
-    def __init__(self, screen, log_font):
-        self.screen = screen
-        self.log_font = log_font
+
+class Swiat(ABC):
+    def __init__(self, win, log_window):
+        self.win = win
+        self.log_window = log_window
         self.organizmy = []
         self.nowe = []
         self.logs = []
         self.top_log = 0
         self.command = 0
-        self.cell_size = 20  # pixels
-        self.grid_width = screen.get_width() // self.cell_size
-        self.grid_height = screen.get_height() // self.cell_size - 5  # space for logs
+
+    def get_win(self):
+        return self.win
+
+    def get_log(self):
+        return self.log_window
+
+    def get_top_log_index(self):
+        return self.top_log
+
+    def get_command(self):
+        return self.command
+
+    def set_top_log_index(self, index):
+        if 0 <= index <= len(self.logs) - self.log_window.getmaxyx()[0] + 2:
+            self.top_log = index
+
+    def set_command(self, command):
+        self.command = command
 
     def nowy_organizm(self, organizm):
         self.nowe.append(organizm)
@@ -20,10 +51,9 @@ class Swiat:
     def nowy_log(self, log):
         self.logs.append(log)
 
-    def set_top_log_index(self, index):
-        max_logs_display = 5
-        if 0 <= index <= len(self.logs) - max_logs_display:
-            self.top_log = index
+    #to nie bedzie zalezalo od
+    def wyswietl_logi(self, pierwszy_log):
+        self.log_window
 
     def wykonaj_ture(self):
         self.sortuj_wszystkie()
@@ -34,6 +64,7 @@ class Swiat:
         self.organizmy.extend(self.nowe)
         self.nowe.clear()
         self.rysuj_swiat()
+        self.wyswietl_logi(self.top_log)
 
     def sortuj_wszystkie(self):
         self.organizmy.sort(key=lambda o: o.get_inicjatywa(), reverse=True)
@@ -41,91 +72,57 @@ class Swiat:
     def usun_zabite(self):
         self.organizmy = [o for o in self.organizmy if o.get_zyje()]
 
-    def rysuj_swiat(self):
-        self.screen.fill((0, 0, 0))  # clear screen
-
-        # Draw organisms
-        for organizm in self.organizmy:
-            x = organizm.get_pozycja_x() * self.cell_size
-            y = organizm.get_pozycja_y() * self.cell_size
-            pygame.draw.rect(self.screen, organizm.rysowanie(), (x, y, self.cell_size, self.cell_size))
-
-        # Draw logs
-        self.draw_logs()
-
-        pygame.display.flip()
-
-    def draw_logs(self):
-        log_start_y = self.grid_height * self.cell_size + 5
-        max_lines = 5
-        for i in range(max_lines):
-            log_index = self.top_log + i
-            if log_index < len(self.logs):
-                log_text = self.logs[log_index]
-                rendered_text = self.log_font.render(log_text, True, (255, 255, 255))
-                self.screen.blit(rendered_text, (5, log_start_y + i * 20))
-
-    def find_organism_at(self, x, y):
-        for o in self.organizmy + self.nowe:
-            if o.get_pozycja_x() == x and o.get_pozycja_y() == y:
-                return o
-        return None
-
     def save(self, file_path):
-        with open(file_path, 'w') as f:
-            f.write("Win\n")
-            for o in self.organizmy:
-                f.write(f"{o.nazwa()} {o.get_pozycja_x()} {o.get_pozycja_y()} {o.get_sila()}\n")
-            f.write("LogWindow\n")
+        with open(file_path, 'w') as file:
+            file.write("Win\n")
+            for organizm in self.organizmy:
+                file.write(f"{organizm.nazwa()} {organizm.get_pozycja_x()} {organizm.get_pozycja_y()} {organizm.get_sila()}\n")
+            file.write("LogWindow\n")
             for log in self.logs:
-                f.write(f"{log}\n")
+                file.write(log + "\n")
 
     def load(self, file_path):
         self.organizmy.clear()
         self.logs.clear()
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
 
-        if not os.path.exists(file_path):
-            return
+        i = 1
+        while i < len(lines) and lines[i].strip() != "LogWindow":
+            parts = lines[i].split()
+            nazwa, x, y, sila = parts[0], int(parts[1]), int(parts[2]), int(parts[3])
+            organizm = self._stworz_organizm_po_nazwie(nazwa, x, y)
+            if organizm:
+                organizm.set_sila(sila)
+                self.nowy_organizm(organizm)
+            i += 1
 
-        with open(file_path, 'r') as f:
-            lines = f.readlines()
+        for log in lines[i+1:]:
+            if log.strip():
+                self.logs.append(log.strip())
 
-        mode = None
-        for line in lines:
-            line = line.strip()
-            if line == "Win":
-                mode = "Win"
-                continue
-            elif line == "LogWindow":
-                mode = "LogWindow"
-                continue
-
-            if mode == "Win":
-                tokens = line.split()
-                if len(tokens) != 4:
-                    continue
-                name, x, y, sila = tokens
-                organizm = self.create_organizm(name, int(x), int(y))
-                if organizm:
-                    organizm.set_sila(int(sila))
-                    self.nowy_organizm(organizm)
-            elif mode == "LogWindow":
-                self.logs.append(line)
-
-    def create_organizm(self, name, x, y):
-        # Replace with actual class mapping
+    def _stworz_organizm_po_nazwie(self, nazwa, x, y):
         mapping = {
             "Wilk": Wilk,
             "Owca": Owca,
             "Lis": Lis,
             "Zolw": Zolw,
             "Antylopa": Antylopa,
+            "Czlowiek": Czlowiek,
             "Trawa": Trawa,
             "Mlecz": Mlecz,
             "Guarana": Guarana,
             "Wilcze Jagody": Jagody,
-            "Barszcz Sosnowskiego": Barszcz,
-            "Czlowiek": Czlowiek,
+            "Barszcz Sosnowskiego": Barszcz
         }
-        cls = mapping.get(name)
-        return cls(x, y, self) if cls else None
+        return mapping[nazwa](x, y, self) if nazwa in mapping else None
+
+    def find_organism_at(self, x, y):
+        for organizm in self.organizmy + self.nowe:
+            if organizm.get_pozycja_x() == x and organizm.get_pozycja_y() == y:
+                return organizm
+        return None
+
+    @abstractmethod
+    def rysuj_swiat(self):
+        pass
