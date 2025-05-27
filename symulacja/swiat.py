@@ -1,4 +1,4 @@
-import pygame
+import tkinter
 import os
 
 class Swiat:
