@@ -14,7 +14,7 @@ from symulacja.organizmy.rosliny.mlecz import Mlecz
 from symulacja.organizmy.rosliny.guarana import Guarana
 from symulacja.organizmy.rosliny.jagody import Jagody
 from symulacja.organizmy.rosliny.barszcz import Barszcz
-
+import symulacja.organizmy.rosliny
 
 class Swiat(ABC):
     def __init__(self, win, log_window):
@@ -53,7 +53,7 @@ class Swiat(ABC):
 
     #to nie bedzie zalezalo od
     def wyswietl_logi(self, pierwszy_log):
-        self.log_window
+        print(self.log_window)
 
     def wykonaj_ture(self):
         self.sortuj_wszystkie()
@@ -113,7 +113,8 @@ class Swiat(ABC):
             "Mlecz": Mlecz,
             "Guarana": Guarana,
             "Wilcze Jagody": Jagody,
-            "Barszcz Sosnowskiego": Barszcz
+            "Barszcz Sosnowskiego ": Barszcz,
+            "Cyberowca" : Cyberowca
         }
         return mapping[nazwa](x, y, self) if nazwa in mapping else None
 

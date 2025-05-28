@@ -1,17 +1,24 @@
 import tkinter as tk
-
+from utils.settings import Settings
 # Main Tkinter app
 def main():
     root = tk.Tk()
-    root.title("Hive Grid")
-
+    root.title("Bartosz Pacyga s203833")
+    settings = Settings("files/conf.txt")
+    
+    #dodac mozliwosc sterowaniem tym z configu
     canvas_width = 800
     canvas_height = 600
+    #dodanie mozliwosci wybrania swiata
+
+
+    #zaladowanie konkretnego swiata
+
+
+    #wybor zwierzat i pozycji
 
     canvas = tk.Canvas(root, width=canvas_width, height=canvas_height, bg="white")
     canvas.pack()
-
-    draw_hive_grid(canvas, rows=10, cols=10, size=30)
 
     root.mainloop()
 
