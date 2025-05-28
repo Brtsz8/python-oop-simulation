@@ -1,2 +1,3 @@
 width: 10
 height: 12
+map: square
