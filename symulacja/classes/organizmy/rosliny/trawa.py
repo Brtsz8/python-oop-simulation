@@ -1,4 +1,4 @@
-from symulacja.organizmy.roslina import Roslina
+from symulacja.classes.organizmy.roslina import Roslina
 
 
 class Trawa(Roslina):

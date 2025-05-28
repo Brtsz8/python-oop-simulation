@@ -1,5 +1,5 @@
-from symulacja.organizmy.roslina import Roslina
-from symulacja.organizmy.zwierze import Zwierze
+from symulacja.classes.organizmy.roslina import Roslina
+from symulacja.classes.organizmy.zwierze import Zwierze
 
 class Barszcz(Roslina):
     def __init__(self, x, y, swiat):

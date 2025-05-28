@@ -1,7 +1,7 @@
 import random
 import logging
 
-from symulacja.organizm import Organizm
+from symulacja.classes.organizm import Organizm
 
 
 class Zwierze(Organizm):

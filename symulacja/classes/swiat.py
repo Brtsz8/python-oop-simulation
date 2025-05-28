@@ -1,20 +1,20 @@
 from abc import ABC, abstractmethod
 from organizm import Organizm
 #zwierzeta
-from symulacja.organizmy.zwierzeta.wilk import Wilk
-from symulacja.organizmy.zwierzeta.owca import Owca
-from symulacja.organizmy.zwierzeta.lis import Lis
-from symulacja.organizmy.zwierzeta.zolw import Zolw
-from symulacja.organizmy.zwierzeta.antylopa import Antylopa
-from symulacja.organizmy.zwierzeta.czlowiek import Czlowiek
-from symulacja.organizmy.zwierzeta.cyberowca import Cyberowca
+from symulacja.classes.organizmy.zwierzeta.wilk import Wilk
+from symulacja.classes.organizmy.zwierzeta.owca import Owca
+from symulacja.classes.organizmy.zwierzeta.lis import Lis
+from symulacja.classes.organizmy.zwierzeta.zolw import Zolw
+from symulacja.classes.organizmy.zwierzeta.antylopa import Antylopa
+from symulacja.classes.organizmy.zwierzeta.czlowiek import Czlowiek
+from symulacja.classes.organizmy.zwierzeta.cyberowca import Cyberowca
 #rosliny
-from symulacja.organizmy.rosliny.trawa import Trawa
-from symulacja.organizmy.rosliny.mlecz import Mlecz
-from symulacja.organizmy.rosliny.guarana import Guarana
-from symulacja.organizmy.rosliny.jagody import Jagody
-from symulacja.organizmy.rosliny.barszcz import Barszcz
-import symulacja.organizmy.rosliny
+from symulacja.classes.organizmy.rosliny.trawa import Trawa
+from symulacja.classes.organizmy.rosliny.mlecz import Mlecz
+from symulacja.classes.organizmy.rosliny.guarana import Guarana
+from symulacja.classes.organizmy.rosliny.jagody import Jagody
+from symulacja.classes.organizmy.rosliny.barszcz import Barszcz
+import symulacja.classes.organizmy.rosliny
 
 class Swiat(ABC):
     def __init__(self, win, log_window):

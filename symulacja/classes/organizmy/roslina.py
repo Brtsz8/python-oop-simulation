@@ -1,11 +1,11 @@
 import random
 
-from symulacja.organizm import Organizm
+from symulacja.classes.organizm import Organizm
 
 
 class Roslina(Organizm):
     def __init__(self, sila, x, y, swiat):
-        super().__init__(sila, inicjatywa=0, x=x, y=y, swiat=swiat)
+        super().__init__(sila, inicjatywa=0, pozycja_x=x, pozycja_y=y, swiat=swiat)
 
     def czy_rosnie(self):
         return random.randint(0, 9)

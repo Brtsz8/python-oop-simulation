@@ -11,19 +11,21 @@ def main():
 
     #dodac mozliwosc sterowaniem tym z configu
 
-    canvas_width = 800
-    canvas_height = 600
-    #dodanie mozliwosci wybrania swiata
-    btn_swiat = Button(window,text = "Świat Kwadratowy", command=settings.set_map_sqr)
-    btn_swiat_hex = Button(window,text = "Świat Hex", command=settings.set_map_hex)
+    # Create a label and bind it to the settings instance
+    label = tk.Label(window, text="No map type selected")
+    label.pack()
+
+    # Let settings access the label so it can update it
+    settings.bind_label(label)
+
+    # Buttons
+    btn_swiat = tk.Button(window, text="Świat Kwadratowy", command=settings.set_map_sqr)
+    btn_swiat_hex = tk.Button(window, text="Świat Hex", command=settings.set_map_hex)
+
     btn_swiat.pack()
     btn_swiat_hex.pack()
-    #zaladowanie konkretnego swiata
 
-
-    #wybor zwierzat i pozycji
-    canvas = tk.Canvas(window, width=canvas_width, height=canvas_height, bg="white")
-    canvas.pack()
+    window.mainloop()
 
     window.mainloop()
 

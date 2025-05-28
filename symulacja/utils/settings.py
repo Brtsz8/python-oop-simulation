@@ -1,8 +1,9 @@
 class Settings :
     def __init__(self, filename):
+        self.label = None
         self.width = None
         self.height = None
-        self.type = 'square'
+        self.map_type = 'square'
         self._read_file(filename)
 
     def _read_file(self, filename):
@@ -23,7 +24,16 @@ class Settings :
                         raise ValueError(f"Invalid map type: {value}")
 
     def set_map_sqr(self):
-        self.type = 'square'
+        self.map_type = 'square'
+        self.update_label()
 
     def set_map_hex(self):
-        self.type= 'hex'
+        self.map_type= 'hex'
+        self.update_label()
+
+    def update_label(self):
+        if self.label:
+            self.label.config(text=f"Selected map type: {self.map_type}")
+
+    def bind_label(self, label_widget):
+        self.label = label_widget

@@ -1,9 +1,9 @@
-from symulacja.organizmy.zwierze import Zwierze
+from symulacja.classes.organizmy.zwierze import Zwierze
 
 
 class Zolw(Zwierze):
     def __init__(self, x, y, swiat):
-        super().__init__(sila=2, inicjatywa=1, pozycja_x=x, pozycja_y=y, swiat=swiat)
+        super().__init__(sila=2, inicjatywa=1, x=x, y=y, swiat=swiat)
 
     def akcja(self):
         if self.get_random_dir() == 0:  # 25% szansy na ruch (1 z 4 kierunków)
