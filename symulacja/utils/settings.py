@@ -40,4 +40,4 @@ class Settings :
         self.label = label_widget
 
     def set_lvl(self,name):
-        self.current_lvl = name
+        self.current_lvl = f"files/lvl/{name}.txt"

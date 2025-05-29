@@ -1,8 +1,7 @@
-from symulacja.views.lvl_selection_view import LvlSelectionView
 from utils.settings import Settings
-from views.world_selection_view import WorldSelectionView
-#from views.lvl_selection_view import LvlSelectionView
-#from views.sim_view import SimView
+from symulacja.views.world_selection_view import WorldSelectionView
+from symulacja.views.lvl_selection_view import LvlSelectionView
+from symulacja.views.sim_view import SimView
 
 class AppController:
     def __init__(self,root):
@@ -17,6 +16,10 @@ class AppController:
     def show_lvl_selection(self):
         self.clear_window()
         LvlSelectionView(self.root,self)
+
+    def start_game(self):
+        self.clear_window()
+        SimView(self.root,self,self.settings.current_lvl)
 
     #funkcja usuwa wszystkie widgety z roota, jednoczesnie go czyszczac
     def clear_window(self):

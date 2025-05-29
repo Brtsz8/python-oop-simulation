@@ -37,3 +37,4 @@ class LvlSelectionView(Frame):
             self.controller.settings.set_lvl('s'+str(lvl))
         if type == 'hex':
             self.controller.settings.set_lvl('h'+str(lvl))
+        self.controller.start_game()
