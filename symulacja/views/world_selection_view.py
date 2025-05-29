@@ -18,8 +18,8 @@ class WorldSelectionView(Frame):
 
     def select_square(self):
         self.controller.settings.set_map_sqr()
-        #self.controller.show_level_selection()
+        self.controller.show_lvl_selection()
 
     def select_hex(self):
         self.controller.settings.set_map_hex()
-        #self.controller.show_level_selection()
+        self.controller.show_lvl_selection()

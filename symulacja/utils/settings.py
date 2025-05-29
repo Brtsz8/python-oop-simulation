@@ -4,6 +4,7 @@ class Settings :
         self.width = None
         self.height = None
         self.map_type = 'square'
+        self.current_lvl = ''
         self._read_file(filename)
 
     def _read_file(self, filename):
@@ -15,7 +16,7 @@ class Settings :
 
                 if key == 'width':
                     self.width = int(value)
-                elif key in 'height':  # typo handling
+                elif key in 'height':
                     self.height = int(value)
                 elif key == 'map':
                     if value in ['square', 'hex']:
@@ -37,3 +38,6 @@ class Settings :
 
     def bind_label(self, label_widget):
         self.label = label_widget
+
+    def set_lvl(self,name):
+        self.current_lvl = name
