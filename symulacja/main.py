@@ -11,8 +11,6 @@ def main():
     window.title("Bartosz Pacyga s203833")
     window.geometry("800x600")
     controller = AppController(window)
-
-
     window.mainloop()
 
 if __name__ == "__main__":
