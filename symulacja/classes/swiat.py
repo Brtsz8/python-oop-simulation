@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from organizm import Organizm
 #zwierzeta
 from symulacja.classes.organizmy.zwierzeta.wilk import Wilk
 from symulacja.classes.organizmy.zwierzeta.owca import Owca
@@ -14,7 +13,6 @@ from symulacja.classes.organizmy.rosliny.mlecz import Mlecz
 from symulacja.classes.organizmy.rosliny.guarana import Guarana
 from symulacja.classes.organizmy.rosliny.jagody import Jagody
 from symulacja.classes.organizmy.rosliny.barszcz import Barszcz
-import symulacja.classes.organizmy.rosliny
 
 class Swiat(ABC):
     def __init__(self, win, log_window):
@@ -51,9 +49,20 @@ class Swiat(ABC):
     def nowy_log(self, log):
         self.logs.append(log)
 
-    #to nie bedzie zalezalo od
-    def wyswietl_logi(self, pierwszy_log):
-        print(self.log_window)
+    #funkcja wyswietla wszystki logi w side_panel
+    def wyswietl_logi(self, pierwszy_log = 0):
+        if not self.log_window:
+            return
+
+        self.log_window.config(state='normal')  # umożliw edycję
+        self.log_window.delete("1.0", "end")  # wyczyść całość
+
+        max_lines = int(self.log_window['height']) - 1
+        for i in range(pierwszy_log, min(pierwszy_log + max_lines, len(self.logs))):
+            self.log_window.insert('end', self.logs[i] + '\n')
+
+        self.log_window.see("end")  # scroll do końca
+        self.log_window.config(state='disabled')  # zablokuj edycję
 
     def wykonaj_ture(self):
         self.sortuj_wszystkie()

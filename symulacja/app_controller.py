@@ -1,3 +1,5 @@
+from tkinter import Frame, Label
+
 from utils.settings import Settings
 from symulacja.views.world_selection_view import WorldSelectionView
 from symulacja.views.lvl_selection_view import LvlSelectionView
@@ -19,7 +21,21 @@ class AppController:
 
     def start_game(self):
         self.clear_window()
-        SimView(self.root,self,self.settings.current_lvl)
+        canvas_frame = Frame(self.root)
+        side_panel = Frame(self.root)
+
+        canvas_frame.pack(side='left', fill='both', expand=True)
+        side_panel.pack(side='right', fill='y')
+
+        label = Label(side_panel, text="LOGI", bg="lightgrey")
+        label.pack(side="top", fill="x")
+
+        sim_view = SimView(self.root, controller=self,
+                           lvl_path=self.settings.current_lvl,
+                           canvas_frame=canvas_frame,
+                           side_panel=side_panel)
+
+
 
     #funkcja usuwa wszystkie widgety z roota, jednoczesnie go czyszczac
     def clear_window(self):
