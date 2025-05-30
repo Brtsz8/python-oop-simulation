@@ -33,7 +33,7 @@ class SimView(Frame):
 
     def init_world(self):
         if self.controller.settings.map_type == 'square':
-            self.swiat = SwiatKwadratowy(self.canvas, self.log_window)
+            self.swiat = SwiatKwadratowy(self.canvas, self.log_window,self.controller.settings)
             self.swiat.nowy_log("Wyswietl ten log pls")
             self.swiat.nowy_log("1 Wyswietl ten log pls")
             self.swiat.nowy_log("2 Wyswietl ten log pls")

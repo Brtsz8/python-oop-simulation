@@ -9,7 +9,6 @@ from app_controller import AppController
 def main():
     window = tk.Tk()
     window.title("Bartosz Pacyga s203833")
-    window.geometry("800x600")
     controller = AppController(window)
     window.mainloop()
 

@@ -9,6 +9,8 @@ class AppController:
     def __init__(self,root):
         self.root = root
         self.settings = Settings("files/conf.txt")
+        self.root.geometry(f"{self.settings.width * self.settings.cell_size + 300}" + "x" +
+                           f"{self.settings.height * self.settings.cell_size}")
         self.world_selection()
 
     def world_selection(self):

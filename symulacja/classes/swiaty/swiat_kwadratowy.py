@@ -3,21 +3,29 @@ import tkinter as tk
 from symulacja.classes.swiat import Swiat
 
 class SwiatKwadratowy(Swiat):
-    def __init__(self, canvas, side_panel):
+    def __init__(self, canvas, side_panel,settings):
         super().__init__(canvas,side_panel)
+        self.settings = settings
+        #kolory planszy
+        self.color1 = "#aad751"
+        self.color2 = "#a2d149"
 
+    #funkjca nadpisuje klase swiat
+    #jedna z dwoch podklas kwadrat/hex
+    # - informacje takie jak rows/cols/cell_size wczytywane przez klase settings
+    # - kolory planszy inicjalizowane wraz z klasa (w przyszlosci mozna wprowadzic wczytywanie z pliku)
     def rysuj_swiat(self):
         canvas = self.win
-        canvas.delete("all")  # Clear previous drawings
+        canvas.delete("all")  #czyszczenie tego co bylo wczesniej
 
-        rows = 10
-        cols = 10
+        rows = self.settings.width
+        cols = self.settings.height
         cell_size = 40
 
         # Draw checkered grid
         for y in range(rows):
             for x in range(cols):
-                color = "#aad751" if (x + y) % 2 == 0 else "#a2d149"
+                color = self.color1 if (x + y) % 2 == 0 else self.color2
                 canvas.create_rectangle(
                     x * cell_size,
                     y * cell_size,

@@ -3,6 +3,7 @@ class Settings :
         self.label = None
         self.width = None
         self.height = None
+        self.cell_size = 40
         self.map_type = 'square'
         self.current_lvl = ''
         self._read_file(filename)
