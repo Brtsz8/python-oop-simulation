@@ -27,7 +27,7 @@ class Zwierze(Organizm):
 
         if other is None:
             self.set_pozycja(new_x, new_y)
-            self.swiat.log(f"{self.nazwa()} przesunęło się na ({new_x}, {new_y})")
+            self.swiat.nowy_log(f"{self.nazwa()} przesunęło się na ({new_x}, {new_y})")
         else:
             self.kolizja(from_x, from_y, other)
 

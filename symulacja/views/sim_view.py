@@ -1,3 +1,4 @@
+import time
 import tkinter as tk
 from tkinter import Frame
 from tkinter import Text
@@ -39,7 +40,13 @@ class SimView(Frame):
             self.swiat.nowy_log("2 Wyswietl ten log pls")
             self.swiat.nowy_organizm(Owca(1,1,self.swiat))
             self.swiat.wykonaj_ture()
+            self.zaplanuj_ture()
         elif self.controller.settings.map_type =='hex':
             self.swiat = SwiatHex(self.canvas, self.log_window)
         else:
             raise ValueError("Unknown map type selected.")
+
+    def zaplanuj_ture(self):
+        self.swiat.wykonaj_ture()
+        # Zaplanuj następną turę za 1000ms (czyli 1 sekunda)
+        self.after(1000, self.zaplanuj_ture)

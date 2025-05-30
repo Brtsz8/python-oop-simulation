@@ -4,7 +4,7 @@ from symulacja.classes.swiat import Swiat
 
 class SwiatKwadratowy(Swiat):
     def __init__(self, canvas, side_panel,settings):
-        super().__init__(canvas,side_panel)
+        super().__init__(canvas,side_panel,settings)
         self.settings = settings
         #kolory planszy
         self.color1 = "#aad751"
@@ -18,9 +18,10 @@ class SwiatKwadratowy(Swiat):
         canvas = self.win
         canvas.delete("all")  #czyszczenie tego co bylo wczesniej
 
+        #wczytywanie ustawien
         rows = self.settings.width
         cols = self.settings.height
-        cell_size = 40
+        cell_size = self.settings.cell_size
 
         # Draw checkered grid
         for y in range(rows):
@@ -48,6 +49,7 @@ class SwiatKwadratowy(Swiat):
                 fill=color,
                 outline="black"
             )
+        print("koniec rysowania")
 
     def kolor_organizmu(self, nazwa):
         colors = {

@@ -37,8 +37,6 @@ class AppController:
                            canvas_frame=canvas_frame,
                            side_panel=side_panel)
 
-
-
     #funkcja usuwa wszystkie widgety z roota, jednoczesnie go czyszczac
     def clear_window(self):
         for widget in self.root.winfo_children():

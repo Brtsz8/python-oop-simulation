@@ -15,7 +15,7 @@ from symulacja.classes.organizmy.rosliny.jagody import Jagody
 from symulacja.classes.organizmy.rosliny.barszcz import Barszcz
 
 class Swiat(ABC):
-    def __init__(self, win, log_window):
+    def __init__(self, win, log_window, settings):
         self.win = win
         self.log_window = log_window
         self.organizmy = []
@@ -23,6 +23,8 @@ class Swiat(ABC):
         self.logs = []
         self.top_log = 0
         self.command = 0
+        self.grid_width = settings.cell_size * settings.width
+        self.grid_height = settings.cell_size * settings.height
 
     def get_win(self):
         return self.win
