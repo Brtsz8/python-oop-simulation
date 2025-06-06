@@ -38,10 +38,10 @@ class Zwierze(Organizm):
                 return
             potomek = self.dodaj_potomka(new_x, new_y)
             if potomek:
-                self.swiat.dodaj_organizm(potomek)
-                self.swiat.log(f"{self.nazwa()} i {other.nazwa()} rozmnażają się na ({new_x}, {new_y})")
+                self.swiat.nowy_organizm(potomek)
+                self.swiat.nowy_log(f"{self.nazwa()} i {other.nazwa()} rozmnażają się na ({new_x}, {new_y})")
             else:
-                self.swiat.log("Nie udało się stworzyć potomka – błąd.")
+                self.swiat.nowy_log("Nie udało się stworzyć potomka – błąd.")
             return
 
         if other.czy_odbil_atak(self):
@@ -63,3 +63,6 @@ class Zwierze(Organizm):
         else:
             self.set_zyje_false()
             self.swiat.log(f"{other.nazwa()} zabił {self.nazwa()} na ({self.get_pozycja_x()}, {self.get_pozycja_y()})")
+
+    def dodaj_potomka(self, new_x, new_y):
+        pass

@@ -43,3 +43,6 @@ class Roslina(Organizm):
 
     def kolizja(self, from_x, from_y, other):
         pass  # może zostać nadpisane w roślinach specjalnych
+
+    def dodaj_potomka(self, new_x, new_y):
+        pass
