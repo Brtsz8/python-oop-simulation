@@ -49,7 +49,8 @@ class SwiatKwadratowy(Swiat):
                 fill=color,
                 outline="black"
             )
-        print("koniec rysowania")
+        #log for testing
+        #print("koniec rysowania")
 
     def kolor_organizmu(self, nazwa):
         colors = {

@@ -20,7 +20,13 @@ class SimView(Frame):
         self.pack()
 
         btn1 = tk.Button(self.side_panel, text="Wykonaj Ture", command=self.wykonaj_ture)
+        #to do
+        btn2 = tk.Button(self.side_panel, text="Zapisz", command=self.save_world)
+        btn3 = tk.Button(self.side_panel, text="Wczytaj", command=self.load_world)
         btn1.pack()
+        btn2.pack()
+        btn3.pack()
+
         self.canvas_frame.pack(side="left", fill="both", expand=True)
 
         self.canvas = tk.Canvas(self.canvas_frame, width=400, height=400)
@@ -37,9 +43,6 @@ class SimView(Frame):
     def init_world(self):
         if self.controller.settings.map_type == 'square':
             self.swiat = SwiatKwadratowy(self.canvas, self.log_window,self.controller.settings)
-            self.swiat.nowy_log("Wyswietl ten log pls")
-            self.swiat.nowy_log("1 Wyswietl ten log pls")
-            self.swiat.nowy_log("2 Wyswietl ten log pls")
             self.swiat.nowy_organizm(Owca(1,1,self.swiat))
             self.swiat.nowy_organizm(Owca(1,2,self.swiat))
             self.swiat.wykonaj_ture()
@@ -50,3 +53,15 @@ class SimView(Frame):
 
     def wykonaj_ture(self):
         self.swiat.wykonaj_ture()
+
+    def save_world(self):
+        self.swiat.save("files/save.txt")
+
+    def load_world(self):
+        self.swiat.load("files/save.txt")
+        self.swiat.sortuj_wszystkie()
+        self.swiat.usun_zabite()
+        self.swiat.organizmy.extend(self.swiat.nowe)
+        self.swiat.nowe.clear()
+        self.swiat.rysuj_swiat()
+        self.swiat.wyswietl_logi(self.swiat.top_log)

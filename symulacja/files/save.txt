@@ -1,0 +1,68 @@
+Win
+Owca 6 4 4
+Owca 1 3 4
+Owca 1 1 4
+Owca 2 3 4
+Owca 2 1 4
+Owca 0 3 4
+Owca 0 2 4
+Owca 1 5 4
+Owca 3 2 4
+Owca 1 4 4
+Owca 3 3 4
+Owca 0 4 4
+Owca 1 2 4
+Owca 2 2 4
+Owca 0 1 4
+Owca 2 4 4
+Owca 3 1 4
+Owca 4 2 4
+Owca 4 3 4
+LogWindow
+Wyswietl ten log pls
+1 Wyswietl ten log pls
+2 Wyswietl ten log pls
+Owca i Owca rozmnażają się na (0, 1)
+Owca przesunęło się na (0, 2)
+Owca przesunęło się na (1, 2)
+Owca przesunęło się na (0, 3)
+Owca przesunęło się na (0, 0)
+Owca przesunęło się na (2, 2)
+Owca przesunęło się na (1, 3)
+Owca przesunęło się na (0, 1)
+Owca przesunęło się na (3, 2)
+Owca przesunęło się na (1, 4)
+Owca przesunęło się na (0, 2)
+Owca przesunęło się na (3, 3)
+Owca przesunęło się na (0, 4)
+Owca przesunęło się na (1, 2)
+Owca przesunęło się na (4, 3)
+Owca przesunęło się na (1, 4)
+Owca przesunęło się na (2, 2)
+Owca przesunęło się na (4, 4)
+Owca przesunęło się na (1, 3)
+Owca przesunęło się na (1, 2)
+Owca przesunęło się na (5, 4)
+Owca i Owca rozmnażają się na (2, 3)
+Owca i Owca rozmnażają się na (2, 2)
+Owca przesunęło się na (5, 5)
+Owca i Owca rozmnażają się na (0, 3)
+Owca i Owca rozmnażają się na (0, 2)
+Owca i Owca rozmnażają się na (2, 4)
+Owca i Owca rozmnażają się na (3, 2)
+Owca przesunęło się na (6, 5)
+Owca i Owca rozmnażają się na (1, 4)
+Owca przesunęło się na (1, 1)
+Owca i Owca rozmnażają się na (3, 3)
+Owca przesunęło się na (2, 1)
+Owca i Owca rozmnażają się na (0, 4)
+Owca i Owca rozmnażają się na (1, 2)
+Owca przesunęło się na (2, 5)
+Owca i Owca rozmnażają się na (2, 2)
+Owca przesunęło się na (6, 4)
+Owca i Owca rozmnażają się na (0, 1)
+Owca i Owca rozmnażają się na (2, 4)
+Owca i Owca rozmnażają się na (3, 1)
+Owca przesunęło się na (1, 5)
+Owca i Owca rozmnażają się na (4, 2)
+Owca i Owca rozmnażają się na (4, 3)

@@ -77,7 +77,8 @@ class Swiat(ABC):
         self.nowe.clear()
         self.rysuj_swiat()
         self.wyswietl_logi(self.top_log)
-        print(self.organizmy)
+        #logs for testing
+        #print(self.organizmy)
 
     def sortuj_wszystkie(self):
         self.organizmy.sort(key=lambda o: o.get_inicjatywa(), reverse=True)
