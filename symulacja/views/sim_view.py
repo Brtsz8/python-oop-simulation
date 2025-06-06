@@ -1,9 +1,17 @@
 import time
 import tkinter as tk
+from tkinter import ttk
 from tkinter import Frame
 from tkinter import Text
 
+from wheel.macosx_libfile import swap32
+
+from symulacja.classes.organizmy.zwierzeta.antylopa import Antylopa
+from symulacja.classes.organizmy.zwierzeta.czlowiek import Czlowiek
+from symulacja.classes.organizmy.zwierzeta.lis import Lis
 from symulacja.classes.organizmy.zwierzeta.owca import Owca
+from symulacja.classes.organizmy.zwierzeta.wilk import Wilk
+from symulacja.classes.organizmy.zwierzeta.zolw import Zolw
 from symulacja.classes.swiaty.swiat_hex import SwiatHex
 from symulacja.classes.swiaty.swiat_kwadratowy import SwiatKwadratowy
 
@@ -19,18 +27,29 @@ class SimView(Frame):
         self.swiat = None
         self.pack()
 
-        btn1 = tk.Button(self.side_panel, text="Wykonaj Ture", command=self.wykonaj_ture)
-        #to do
-        btn2 = tk.Button(self.side_panel, text="Zapisz", command=self.save_world)
-        btn3 = tk.Button(self.side_panel, text="Wczytaj", command=self.load_world)
-        btn1.pack()
-        btn2.pack()
-        btn3.pack()
+        # -- Buttons --
+        btn_tura = tk.Button(self.side_panel, text="Wykonaj Ture", command=self.wykonaj_ture)
+        btn_save = tk.Button(self.side_panel, text="Zapisz", command=self.save_world)
+        btn_load = tk.Button(self.side_panel, text="Wczytaj", command=self.load_world)
+        btn_tura.pack()
+        btn_save.pack()
+        btn_load.pack()
+
+        # -- Drop Down --
+        # Dropdown
+        self.selected_organizm = tk.StringVar()
+        self.dropdown = ttk.Combobox(self, textvariable=self.selected_organizm)
+        self.dropdown['values'] = ["Wilk", "Owca", "Lis", "Zolw", "Antylopa", "Czlowiek"]
+        self.dropdown.current(0)
+        self.dropdown.pack()
 
         self.canvas_frame.pack(side="left", fill="both", expand=True)
 
         self.canvas = tk.Canvas(self.canvas_frame, width=400, height=400)
         self.canvas.pack(fill="both", expand=True)
+
+        # -- Bind click --
+        self.canvas.bind("<Button-1>", self.on_canvas_click)
 
         # Log window (tk.Text)
         self.log_window = Text(self.side_panel, height=20, state='disabled', wrap='word')
@@ -66,3 +85,29 @@ class SimView(Frame):
         self.swiat.nowe.clear()
         self.swiat.rysuj_swiat()
         self.swiat.wyswietl_logi(self.swiat.top_log)
+
+    def on_canvas_click(self, event):
+        cell_size = self.swiat.cell_size
+        x = event.x // cell_size
+        y = event.y // cell_size
+        nazwa = self.selected_organizm.get()
+
+        organizm = self.stworz_organizm(nazwa, x, y)
+        if organizm:
+            self.swiat.nowy_log(f"Dodano {nazwa} na ({x}, {y})")
+            self.swiat.nowy_organizm(organizm)
+            self.swiat.wykonaj_ture()
+
+    def stworz_organizm(self, nazwa, x, y):
+        mapping = {
+            "Wilk": Wilk,
+            "Owca": Owca,
+            "Lis": Lis,
+            "Zolw": Zolw,
+            "Antylopa": Antylopa,
+            "Czlowiek": Czlowiek
+        }
+        cls = mapping.get(nazwa)
+        if cls:
+            return cls(x, y, self.swiat)
+        return None

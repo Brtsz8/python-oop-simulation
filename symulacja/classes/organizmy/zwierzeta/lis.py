@@ -19,8 +19,8 @@ class Lis(Zwierze):
             return None
 
     def akcja(self):
-        if self.swiat is None or self.swiat.okno is None:
-            print("[BŁĄD] Brak dostępu do świata lub okna.")
+        if self.swiat is None:
+            print("[BŁĄD] Brak dostępu do świata.")
             return
 
         dir = self.get_random_dir()

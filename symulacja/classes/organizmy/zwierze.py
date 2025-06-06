@@ -46,23 +46,23 @@ class Zwierze(Organizm):
 
         if other.czy_odbil_atak(self):
             self.set_pozycja(from_x, from_y)
-            self.swiat.log(f"{self.nazwa()} nieudany atak – odbity przez {other.nazwa()} na ({self.pozycja_x}, {self.pozycja_y})")
+            self.swiat.nowy_log(f"{self.nazwa()} nieudany atak – odbity przez {other.nazwa()} na ({self.pozycja_x}, {self.pozycja_y})")
             return
 
         other.wplyw_na_sile(self)
 
         if self.sila < 0:
             self.set_zyje_false()
-            self.swiat.log(f"{self.nazwa()} został zatruty przez {other.nazwa()}")
+            self.swiat.nowy_log(f"{self.nazwa()} został zatruty przez {other.nazwa()}")
             return
 
         if self.wieksza_sila_od(other):
             self.set_pozycja(other.get_pozycja_x(), other.get_pozycja_y())
             other.set_zyje_false()
-            self.swiat.log(f"{self.nazwa()} zabił {other.nazwa()} na ({other.get_pozycja_x()}, {other.get_pozycja_y()})")
+            self.swiat.nowy_log(f"{self.nazwa()} zabił {other.nazwa()} na ({other.get_pozycja_x()}, {other.get_pozycja_y()})")
         else:
             self.set_zyje_false()
-            self.swiat.log(f"{other.nazwa()} zabił {self.nazwa()} na ({self.get_pozycja_x()}, {self.get_pozycja_y()})")
+            self.swiat.nowy_log(f"{other.nazwa()} zabił {self.nazwa()} na ({self.get_pozycja_x()}, {self.get_pozycja_y()})")
 
     def dodaj_potomka(self, new_x, new_y):
         pass
