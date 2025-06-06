@@ -43,9 +43,8 @@ class SimView(Frame):
     def init_world(self):
         if self.controller.settings.map_type == 'square':
             self.swiat = SwiatKwadratowy(self.canvas, self.log_window,self.controller.settings)
-            self.swiat.nowy_organizm(Owca(1,1,self.swiat))
-            self.swiat.nowy_organizm(Owca(1,2,self.swiat))
-            self.swiat.wykonaj_ture()
+            self.load_world(self.lvl_path)
+            #self.swiat.wykonaj_ture()
         elif self.controller.settings.map_type =='hex':
             self.swiat = SwiatHex(self.canvas, self.log_window)
         else:
@@ -54,11 +53,13 @@ class SimView(Frame):
     def wykonaj_ture(self):
         self.swiat.wykonaj_ture()
 
+    #zapisywanie swiata do pliku
     def save_world(self):
         self.swiat.save("files/save.txt")
 
-    def load_world(self):
-        self.swiat.load("files/save.txt")
+    #ladowanie swiata z pliku i wyswietlanie go
+    def load_world(self,file_path="files/save.txt"):
+        self.swiat.load(file_path)
         self.swiat.sortuj_wszystkie()
         self.swiat.usun_zabite()
         self.swiat.organizmy.extend(self.swiat.nowe)
