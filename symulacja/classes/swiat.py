@@ -25,6 +25,7 @@ class Swiat(ABC):
         self.command = 0
         self.grid_width = settings.cell_size * settings.width
         self.grid_height = settings.cell_size * settings.height
+        self.cell_size = settings.cell_size
 
     def get_win(self):
         return self.win
