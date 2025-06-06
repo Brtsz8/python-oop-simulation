@@ -19,8 +19,8 @@ class SwiatKwadratowy(Swiat):
         canvas.delete("all")  #czyszczenie tego co bylo wczesniej
 
         #wczytywanie ustawien
-        rows = self.settings.width
-        cols = self.settings.height
+        cols = self.settings.width
+        rows = self.settings.height
         cell_size = self.settings.cell_size
 
         # Draw checkered grid

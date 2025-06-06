@@ -51,8 +51,8 @@ class Organizm:
         return random.randint(0, 3)
 
     def is_in_bounds(self, x: int, y: int) -> bool:
-        max_x = self.swiat.grid_height / self.swiat.cell_size
-        max_y = self.swiat.grid_width / self.swiat.cell_size
+        max_x = self.swiat.grid_width / self.swiat.cell_size
+        max_y = self.swiat.grid_height / self.swiat.cell_size
         return 0 <= x < max_x and 0 <= y < max_y
 
     def znajdz_wolne_pole_obok(self) -> Tuple[int, int]:
