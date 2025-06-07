@@ -14,17 +14,13 @@ class Roslina(Organizm):
         if self.swiat is None:
             raise RuntimeError("Błąd: swiat == None")
 
-        # ~30% szans na rozrost (roslina nie rośnie co turę)
-        if self.czy_rosnie() % 3 != 0:
+        #~80% szans na rozrost (roslina nie rośnie co turę)
+        if self.czy_rosnie() < 8:
             return
-
-        directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]  # góra, dół, lewo, prawo
-        dx, dy = directions[self.get_random_dir()]
 
         from_x = self.pozycja_x
         from_y = self.pozycja_y
-        new_x = from_x + dx
-        new_y = from_y + dy
+        new_x, new_y = self.znajdz_wolne_pole_obok()
 
         if not self.is_in_bounds(new_x, new_y):
             return
@@ -33,8 +29,8 @@ class Roslina(Organizm):
         if other is None:
             potomek = self.dodaj_potomka(new_x, new_y)
             if potomek:
-                self.swiat.dodaj_organizm(potomek)
-                self.swiat.log(f"{self.nazwa()} rozprzestrzenia się na ({new_x}, {new_y})")
+                self.swiat.nowy_organizm(potomek)
+                self.swiat.nowy_log(f"{self.nazwa()} rozprzestrzenia się na ({new_x}, {new_y})")
             else:
                 print("Nie udało się stworzyć potomka – błąd programu.")
         else:

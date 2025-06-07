@@ -7,12 +7,21 @@ from tkinter import Text
 from click import command
 from wheel.macosx_libfile import swap32
 
+#zwierzeta
 from symulacja.classes.organizmy.zwierzeta.antylopa import Antylopa
 from symulacja.classes.organizmy.zwierzeta.czlowiek import Czlowiek
 from symulacja.classes.organizmy.zwierzeta.lis import Lis
 from symulacja.classes.organizmy.zwierzeta.owca import Owca
 from symulacja.classes.organizmy.zwierzeta.wilk import Wilk
 from symulacja.classes.organizmy.zwierzeta.zolw import Zolw
+from symulacja.classes.organizmy.zwierzeta.cyberowca import Cyberowca
+#rosliny
+from symulacja.classes.organizmy.rosliny.trawa import Trawa
+from symulacja.classes.organizmy.rosliny.jagody import Jagody
+from symulacja.classes.organizmy.rosliny.guarana import Guarana
+from symulacja.classes.organizmy.rosliny.mlecz import Mlecz
+from symulacja.classes.organizmy.rosliny.barszcz import Barszcz
+
 from symulacja.classes.swiaty.swiat_hex import SwiatHex
 from symulacja.classes.swiaty.swiat_kwadratowy import SwiatKwadratowy
 
@@ -44,7 +53,9 @@ class SimView(Frame):
         # Dropdown
         self.selected_organizm = tk.StringVar()
         self.dropdown = ttk.Combobox(self.side_panel, textvariable=self.selected_organizm)
-        self.dropdown['values'] = ["Wilk", "Owca", "Lis", "Zolw", "Antylopa", "Czlowiek"]
+        self.dropdown['values'] = ["Wilk", "Owca", "Lis", "Zolw", "Antylopa", "Czlowiek",
+                                   "Cyberowca", "Trawa", "Barszcz Sosnowskiego"
+                                   "Guarana", "Mlecz", "Jagody"]
         self.dropdown.current(0)
         self.dropdown.pack()
 
@@ -109,7 +120,13 @@ class SimView(Frame):
             "Lis": Lis,
             "Zolw": Zolw,
             "Antylopa": Antylopa,
-            "Czlowiek": Czlowiek
+            "Czlowiek": Czlowiek,
+            "Cyberowca": Cyberowca,
+            "Trawa": Trawa,
+            "Mlecz": Mlecz,
+            "Guarana": Guarana,
+            "Barszcz Sosnowskiego": Barszcz,
+            "Jagody" : Jagody
         }
         cls = mapping.get(nazwa)
         if cls:

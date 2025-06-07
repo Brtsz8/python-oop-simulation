@@ -24,16 +24,16 @@ class Mlecz(Roslina):
 
             kierunki = [(0,-1),(0,1),(-1,0),(1,0)]
             dx,dy = random.choice(kierunki)
-            new_x = self.x + dx
-            new_y = self.y + dy
+            new_x = self.pozycja_x + dx
+            new_y = self.pozycja_y + dy
 
-            if not self.get_swiat().czy_w_zasiegu(new_x,new_y):
+            if not self.is_in_bounds(new_x,new_y):
                 continue
 
-            if self.get_swiat().znajdz_organizm_na(new_x,new_y) is None:
+            if self.swiat.find_organism_at(new_x,new_y) is None:
                 potomek = self.dodaj_potomka(new_x,new_y)
                 if potomek is not None:
-                    self.get_swiat().dodaj_organizm(potomek)
+                    self.get_swiat().nowy_organizm(potomek)
                     logi.append(f"Dodano nowy {potomek.nazwa()} na x:{new_x} y:{new_y}")
             for wpis in logi:
-                self.get_swiat().dodaj_log(wpis)
+                self.swiat.nowy_log(wpis)
