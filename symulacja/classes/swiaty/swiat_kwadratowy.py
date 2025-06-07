@@ -64,7 +64,7 @@ class SwiatKwadratowy(Swiat):
             "Trawa": "lightgreen",
             "Mlecz": "yellow",
             "Guarana": "red",
-            "Wilcze Jagody": "darkblue",
-            "Barszcz Sosnowskiego": "darkgreen",
+            "Wilcze_Jagody": "darkblue",
+            "Barszcz_Sosnowskiego": "darkgreen",
         }
         return colors.get(nazwa, "black")

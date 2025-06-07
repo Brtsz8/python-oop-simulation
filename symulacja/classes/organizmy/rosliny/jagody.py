@@ -1,3 +1,5 @@
+from cloudinit.net.netplan import fallback_write_netplan_yaml
+
 from symulacja.classes.organizmy.roslina import Roslina
 import random
 
@@ -9,7 +11,7 @@ class Jagody(Roslina):
         return '%'
 
     def nazwa(self):
-        return "Wilcze Jagody"
+        return "Wilcze_Jagody"
 
     def dodaj_potomka(self, x, y):
         return Jagody(x, y, self.get_swiat())
@@ -18,7 +20,7 @@ class Jagody(Roslina):
         log = f"{self.nazwa()} zjedzone - ginie {other.nazwa()} na polu x:{other.x} y:{other.y}"
         other.set_sila(-1)  # zabija atakującego
         self.get_swiat().dodaj_log(log)
-        self.set_zyje(False)
+        self.zyje = False
 
     def wplyw_na_sile(self, atakujacy):
         log = f"{self.nazwa()} zjedzone - ginie {atakujacy.nazwa()} na polu x:{atakujacy.x} y:{atakujacy.y}"

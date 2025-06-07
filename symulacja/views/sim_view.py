@@ -54,8 +54,8 @@ class SimView(Frame):
         self.selected_organizm = tk.StringVar()
         self.dropdown = ttk.Combobox(self.side_panel, textvariable=self.selected_organizm)
         self.dropdown['values'] = ["Wilk", "Owca", "Lis", "Zolw", "Antylopa", "Czlowiek",
-                                   "Cyberowca", "Trawa", "Barszcz Sosnowskiego"
-                                   "Guarana", "Mlecz", "Jagody"]
+                                   "Cyberowca", "Trawa", "Barszcz_Sosnowskiego",
+                                   "Guarana", "Mlecz", "Wilcze_Jagody"]
         self.dropdown.current(0)
         self.dropdown.pack()
 
@@ -130,8 +130,8 @@ class SimView(Frame):
             "Trawa": Trawa,
             "Mlecz": Mlecz,
             "Guarana": Guarana,
-            "Barszcz Sosnowskiego": Barszcz,
-            "Jagody" : Jagody
+            "Barszcz_Sosnowskiego": Barszcz,
+            "Wilcze_Jagody" : Jagody
         }
         cls = mapping.get(nazwa)
         if cls:

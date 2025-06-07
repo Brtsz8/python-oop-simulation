@@ -130,8 +130,8 @@ class Swiat(ABC):
             "Trawa": Trawa,
             "Mlecz": Mlecz,
             "Guarana": Guarana,
-            "Wilcze Jagody": Jagody,
-            "Barszcz Sosnowskiego ": Barszcz,
+            "Wilcze_Jagody": Jagody,
+            "Barszcz_Sosnowskiego": Barszcz,
             "Cyberowca" : Cyberowca
         }
         return mapping[nazwa](x, y, self) if nazwa in mapping else None
