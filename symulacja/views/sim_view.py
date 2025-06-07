@@ -4,6 +4,7 @@ from tkinter import ttk
 from tkinter import Frame
 from tkinter import Text
 
+from click import command
 from wheel.macosx_libfile import swap32
 
 from symulacja.classes.organizmy.zwierzeta.antylopa import Antylopa
@@ -31,14 +32,18 @@ class SimView(Frame):
         btn_tura = tk.Button(self.side_panel, text="Wykonaj Ture", command=self.wykonaj_ture)
         btn_save = tk.Button(self.side_panel, text="Zapisz", command=self.save_world)
         btn_load = tk.Button(self.side_panel, text="Wczytaj", command=self.load_world)
+        btn_log_up = tk.Button(self.side_panel, text="^",command=lambda : self.przesun_log("DOWN"))
+        btn_log_down = tk.Button(self.side_panel, text="v",command=lambda : self.przesun_log("UP"))
         btn_tura.pack()
         btn_save.pack()
         btn_load.pack()
+        btn_log_up.pack()
+        btn_log_down.pack()
 
         # -- Drop Down --
         # Dropdown
         self.selected_organizm = tk.StringVar()
-        self.dropdown = ttk.Combobox(self, textvariable=self.selected_organizm)
+        self.dropdown = ttk.Combobox(self.side_panel, textvariable=self.selected_organizm)
         self.dropdown['values'] = ["Wilk", "Owca", "Lis", "Zolw", "Antylopa", "Czlowiek"]
         self.dropdown.current(0)
         self.dropdown.pack()
@@ -63,7 +68,6 @@ class SimView(Frame):
         if self.controller.settings.map_type == 'square':
             self.swiat = SwiatKwadratowy(self.canvas, self.log_window,self.controller.settings)
             self.load_world(self.lvl_path)
-            #self.swiat.wykonaj_ture()
         elif self.controller.settings.map_type =='hex':
             self.swiat = SwiatHex(self.canvas, self.log_window)
         else:
@@ -111,3 +115,11 @@ class SimView(Frame):
         if cls:
             return cls(x, y, self.swiat)
         return None
+
+    def przesun_log(self,direction):
+        if direction == "UP":
+            self.swiat.set_top_log_index(self.swiat.get_top_log_index() + 1)
+        elif direction == "DOWN":
+            self.swiat.set_top_log_index(self.swiat.get_top_log_index() - 1)
+        else:
+            print("ERROR: DIRECTION IS NOT CORRECT")

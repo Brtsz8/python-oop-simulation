@@ -40,8 +40,9 @@ class Swiat(ABC):
         return self.command
 
     def set_top_log_index(self, index):
-        if 0 <= index <= len(self.logs) - self.log_window.getmaxyx()[0] + 2:
+        if 0 <= index <= len(self.logs):
             self.top_log = index
+            self.wyswietl_logi(index)
 
     def set_command(self, command):
         self.command = command
