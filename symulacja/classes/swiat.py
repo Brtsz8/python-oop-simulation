@@ -22,7 +22,7 @@ class Swiat(ABC):
         self.nowe = []
         self.logs = []
         self.top_log = 0
-        self.command = 0
+        self.command = None
         self.grid_width = settings.cell_size * settings.width
         self.grid_height = settings.cell_size * settings.height
         self.cell_size = settings.cell_size
@@ -46,6 +46,9 @@ class Swiat(ABC):
 
     def set_command(self, command):
         self.command = command
+        self.wykonaj_ture()
+        print(f"Input {self.command}")
+
 
     def nowy_organizm(self, organizm):
         self.nowe.append(organizm)

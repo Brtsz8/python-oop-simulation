@@ -64,8 +64,13 @@ class SimView(Frame):
         self.canvas = tk.Canvas(self.canvas_frame, width=400, height=400)
         self.canvas.pack(fill="both", expand=True)
 
-        # -- Bind click --
+        # -- Bind--
         self.canvas.bind("<Button-1>", self.on_canvas_click)
+        self.controller.root.bind("<Up>", lambda e: self.swiat.set_command("Up"))
+        self.controller.root.bind("<Down>", lambda e: self.swiat.set_command("Down"))
+        self.controller.root.bind("<Left>", lambda e: self.swiat.set_command("Left"))
+        self.controller.root.bind("<Right>", lambda e: self.swiat.set_command("Right"))
+        self.controller.root.bind("3", lambda e: self.swiat.set_command("Skill"))
 
         # Log window (tk.Text)
         self.log_window = Text(self.side_panel, height=20, state='disabled', wrap='word')
