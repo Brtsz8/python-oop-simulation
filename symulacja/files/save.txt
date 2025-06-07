@@ -1,10 +1,414 @@
 Win
-Barszcz_Sosnowskiego 8 11 99
-Barszcz_Sosnowskiego 9 11 99
-Barszcz_Sosnowskiego 9 10 99
-Barszcz_Sosnowskiego 8 10 99
+Cyberowca 7 10 11
+Cyberowca 4 11 11
+Cyberowca 1 10 11
+Cyberowca 5 11 11
+Cyberowca 2 9 11
+Cyberowca 7 9 11
+Cyberowca 2 11 11
+Cyberowca 6 11 11
+Cyberowca 8 10 11
+Cyberowca 6 9 11
+Cyberowca 8 9 11
+Cyberowca 3 9 11
+Cyberowca 7 8 11
+Cyberowca 7 11 11
+Cyberowca 5 10 11
+Cyberowca 8 8 11
+Cyberowca 5 8 11
+Cyberowca 4 8 11
+Cyberowca 6 7 11
+Cyberowca 7 7 11
+Cyberowca 3 11 11
+Cyberowca 5 7 11
+Cyberowca 6 5 11
+Cyberowca 7 6 11
+Cyberowca 5 9 11
+Cyberowca 2 8 11
+Cyberowca 3 10 11
+Cyberowca 3 6 11
+Cyberowca 9 11 11
+Cyberowca 6 8 11
+Cyberowca 9 9 11
+Cyberowca 8 11 11
+Cyberowca 9 8 11
+Cyberowca 4 9 11
+Cyberowca 4 6 11
+Cyberowca 5 5 11
+Cyberowca 8 6 11
+Cyberowca 1 9 11
+Cyberowca 3 7 11
+Cyberowca 8 7 11
+Cyberowca 4 7 11
+Cyberowca 6 3 11
+Cyberowca 0 4 11
+Cyberowca 2 6 11
+Cyberowca 9 7 11
+Cyberowca 8 5 11
+Cyberowca 6 10 11
+Cyberowca 2 10 11
+Cyberowca 5 6 11
+Cyberowca 6 6 11
+Cyberowca 0 8 11
+Cyberowca 4 5 11
+Cyberowca 5 4 11
+Cyberowca 9 6 11
+Cyberowca 0 10 11
+Cyberowca 9 2 11
+Cyberowca 1 11 11
+Cyberowca 9 10 11
+Cyberowca 4 10 11
+Cyberowca 7 2 11
+Cyberowca 7 5 11
+Cyberowca 1 7 11
+Cyberowca 2 5 11
+Cyberowca 9 5 11
+Cyberowca 0 7 11
+Cyberowca 3 4 11
+Cyberowca 4 3 11
+Cyberowca 3 8 11
+Cyberowca 0 9 11
+Cyberowca 1 6 11
+Cyberowca 8 4 11
+Cyberowca 5 3 11
+Cyberowca 0 11 11
+Cyberowca 2 4 11
+Cyberowca 9 3 11
+Cyberowca 4 1 11
+Cyberowca 6 4 11
+Cyberowca 1 8 11
+Cyberowca 3 5 11
+Cyberowca 6 2 11
+Cyberowca 7 4 11
+Cyberowca 1 5 11
+Cyberowca 0 6 11
+Cyberowca 3 3 11
+Cyberowca 8 2 11
+Cyberowca 5 2 11
+Cyberowca 2 3 11
+Cyberowca 2 7 11
+Cyberowca 0 1 11
+Cyberowca 7 0 11
+Cyberowca 7 3 11
+Cyberowca 0 5 11
+Cyberowca 3 2 11
+Cyberowca 5 1 11
+Cyberowca 2 1 11
+Cyberowca 4 4 11
+Cyberowca 9 1 11
+Cyberowca 7 1 11
+Cyberowca 9 4 11
+Cyberowca 4 2 11
+Cyberowca 8 3 11
+Cyberowca 1 4 11
+Cyberowca 3 0 11
+Cyberowca 8 0 11
+Cyberowca 3 1 11
+Cyberowca 6 1 11
+Cyberowca 2 0 11
+Cyberowca 0 3 11
+Cyberowca 1 3 11
+Cyberowca 0 0 11
+Cyberowca 5 0 11
+Cyberowca 9 0 11
+Cyberowca 6 0 11
+Cyberowca 4 0 11
+Cyberowca 8 1 11
+Cyberowca 1 2 11
+Cyberowca 2 2 11
+Cyberowca 1 1 11
+Cyberowca 1 0 11
+Cyberowca 0 2 11
 LogWindow
 Dodano Barszcz_Sosnowskiego na (8, 11)
 Dodano Barszcz_Sosnowskiego na (9, 11)
 Dodano Barszcz_Sosnowskiego na (9, 10)
 Barszcz_Sosnowskiego rozprzestrzenia się na (8, 10)
+Dodano Cyberowca na (5, 7)
+Dodano Cyberowca na (2, 8)
+Cyberowca przesuwa się na (6,7)
+Dodano Cyberowca na (4, 2)
+Cyberowca przesuwa się na (7,7)
+Cyberowca przesuwa się na (3,8)
+Barszcz_Sosnowskiego rozprzestrzenia się na (7, 11)
+Cyberowca przesuwa się na (8,7)
+Cyberowca przesuwa się na (4,8)
+Cyberowca przesuwa się na (5,2)
+Barszcz_Sosnowskiego rozprzestrzenia się na (7, 10)
+Cyberowca przesuwa się na (8,8)
+Cyberowca przesuwa się na (5,8)
+Cyberowca przesuwa się na (6,2)
+Barszcz_Sosnowskiego rozprzestrzenia się na (6, 10)
+Cyberowca przesuwa się na (8,9)
+Cyberowca przesuwa się na (6,8)
+Cyberowca przesuwa się na (6,3)
+Barszcz_Sosnowskiego rozprzestrzenia się na (6, 9)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (6,4)
+Cyberowca przesuwa się na (8,10)
+Cyberowca przesuwa się na (6,9)
+Cyberowca przesuwa się na (6,5)
+Barszcz_Sosnowskiego rozprzestrzenia się na (6, 11)
+Barszcz_Sosnowskiego rozprzestrzenia się na (5, 10)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (6,6)
+Barszcz_Sosnowskiego rozprzestrzenia się na (5, 11)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (7,9)
+Cyberowca przesuwa się na (7,6)
+Barszcz_Sosnowskiego rozprzestrzenia się na (6, 10)
+Barszcz_Sosnowskiego rozprzestrzenia się na (4, 11)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (7,7)
+Cyberowca przesuwa się na (9,10)
+Cyberowca przesuwa się na (7,10)
+Cyberowca przesuwa się na (7,8)
+Barszcz_Sosnowskiego rozprzestrzenia się na (8, 11)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (7,9)
+Cyberowca przesuwa się na (8,10)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (6,9)
+Barszcz_Sosnowskiego rozprzestrzenia się na (7, 11)
+Barszcz_Sosnowskiego rozprzestrzenia się na (3, 11)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (6,10)
+Cyberowca i Cyberowca rozmnażają się na (8, 11)
+Cyberowca i Cyberowca rozmnażają się na (7, 9)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Barszcz_Sosnowskiego rozprzestrzenia się na (3, 10)
+Cyberowca i Cyberowca rozmnażają się na (8, 9)
+Cyberowca i Cyberowca rozmnażają się na (7, 11)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca i Cyberowca rozmnażają się na (9, 11)
+Cyberowca przesuwa się na (6,9)
+Barszcz_Sosnowskiego rozprzestrzenia się na (4, 10)
+Barszcz_Sosnowskiego rozprzestrzenia się na (2, 11)
+Cyberowca i Cyberowca rozmnażają się na (9, 10)
+Cyberowca i Cyberowca rozmnażają się na (7, 9)
+Cyberowca przesuwa się na (5,10)
+Cyberowca przesuwa się na (5,9)
+Cyberowca i Cyberowca rozmnażają się na (9, 9)
+Cyberowca przesuwa się na (6,11)
+Cyberowca przesuwa się na (6,10)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (7,11)
+Cyberowca i Cyberowca rozmnażają się na (6, 9)
+Cyberowca i Cyberowca rozmnażają się na (8, 8)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (8,11)
+Cyberowca i Cyberowca rozmnażają się na (9, 11)
+Cyberowca i Cyberowca rozmnażają się na (7, 10)
+Cyberowca i Cyberowca rozmnażają się na (9, 8)
+Barszcz_Sosnowskiego rozprzestrzenia się na (4, 9)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (5,11)
+Cyberowca i Cyberowca rozmnażają się na (7, 8)
+Cyberowca i Cyberowca rozmnażają się na (6, 8)
+Cyberowca i Cyberowca rozmnażają się na (8, 7)
+Cyberowca i Cyberowca rozmnażają się na (9, 7)
+Cyberowca i Cyberowca rozmnażają się na (6, 11)
+Cyberowca przesuwa się na (4,10)
+Cyberowca przesuwa się na (4,9)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (5,9)
+Cyberowca i Cyberowca rozmnażają się na (7, 7)
+Cyberowca przesuwa się na (5,8)
+Cyberowca i Cyberowca rozmnażają się na (8, 6)
+Cyberowca i Cyberowca rozmnażają się na (9, 6)
+Cyberowca przesuwa się na (5,10)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (3,9)
+Cyberowca przesuwa się na (4,11)
+Cyberowca przesuwa się na (6,9)
+Cyberowca przesuwa się na (4,9)
+Cyberowca przesuwa się na (6,10)
+Cyberowca przesuwa się na (6,8)
+Cyberowca przesuwa się na (4,8)
+Cyberowca przesuwa się na (5,11)
+Cyberowca przesuwa się na (6,7)
+Cyberowca przesuwa się na (7,6)
+Cyberowca przesuwa się na (8,6)
+Cyberowca przesuwa się na (7,10)
+Cyberowca i Cyberowca rozmnażają się na (5, 9)
+Cyberowca przesuwa się na (3,10)
+Cyberowca przesuwa się na (6,11)
+Cyberowca i Cyberowca rozmnażają się na (3, 8)
+Cyberowca przesuwa się na (7,9)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (7,11)
+Cyberowca przesuwa się na (8,10)
+Cyberowca przesuwa się na (8,9)
+Cyberowca i Cyberowca rozmnażają się na (4, 10)
+Cyberowca przesuwa się na (7,8)
+Cyberowca przesuwa się na (8,11)
+Cyberowca przesuwa się na (8,8)
+Cyberowca przesuwa się na (5,8)
+Cyberowca i Cyberowca rozmnażają się na (4, 7)
+Cyberowca przesuwa się na (7,7)
+Cyberowca przesuwa się na (8,7)
+Cyberowca przesuwa się na (5,7)
+Cyberowca przesuwa się na (6,6)
+Cyberowca przesuwa się na (7,6)
+Cyberowca przesuwa się na (2,10)
+Cyberowca przesuwa się na (2,9)
+Cyberowca przesuwa się na (3,11)
+Cyberowca i Cyberowca rozmnażają się na (9, 10)
+Cyberowca i Cyberowca rozmnażają się na (6, 8)
+Cyberowca i Cyberowca rozmnażają się na (9, 9)
+Cyberowca przesuwa się na (3,9)
+Cyberowca i Cyberowca rozmnażają się na (9, 11)
+Cyberowca i Cyberowca rozmnażają się na (9, 8)
+Cyberowca i Cyberowca rozmnażają się na (4, 9)
+Cyberowca przesuwa się na (6,7)
+Cyberowca przesuwa się na (7,7)
+Cyberowca przesuwa się na (4,11)
+Cyberowca i Cyberowca rozmnażają się na (5, 6)
+Cyberowca i Cyberowca rozmnażają się na (6, 5)
+Cyberowca i Cyberowca rozmnażają się na (8, 6)
+Cyberowca przesuwa się na (2,8)
+Cyberowca przesuwa się na (3,10)
+Cyberowca przesuwa się na (3,7)
+Cyberowca przesuwa się na (4,10)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (5,11)
+Cyberowca i Cyberowca rozmnażają się na (1, 9)
+Cyberowca niszczy Barszcz Sosnowskiego!
+Cyberowca przesuwa się na (6,11)
+Cyberowca i Cyberowca rozmnażają się na (3, 8)
+Cyberowca przesuwa się na (7,11)
+Cyberowca przesuwa się na (5,10)
+Cyberowca i Cyberowca rozmnażają się na (8, 7)
+Cyberowca i Cyberowca rozmnażają się na (4, 7)
+Cyberowca i Cyberowca rozmnażają się na (7, 5)
+Cyberowca i Cyberowca rozmnażają się na (2, 7)
+Cyberowca i Cyberowca rozmnażają się na (3, 6)
+Cyberowca przesuwa się na (8,11)
+Cyberowca i Cyberowca rozmnażają się na (9, 7)
+Cyberowca przesuwa się na (4,6)
+Cyberowca przesuwa się na (5,5)
+Cyberowca i Cyberowca rozmnażają się na (8, 5)
+Cyberowca i Cyberowca rozmnażają się na (6, 10)
+Cyberowca przesunęło się na (1, 10)
+Cyberowca i Cyberowca rozmnażają się na (2, 10)
+Cyberowca przesunęło się na (2, 11)
+Cyberowca przesunęło się na (3, 11)
+Cyberowca i Cyberowca rozmnażają się na (5, 6)
+Cyberowca przesunęło się na (6, 5)
+Cyberowca i Cyberowca rozmnażają się na (6, 6)
+Cyberowca i Cyberowca rozmnażają się na (1, 8)
+Cyberowca przesunęło się na (9, 11)
+Cyberowca i Cyberowca rozmnażają się na (4, 5)
+Cyberowca i Cyberowca rozmnażają się na (5, 4)
+Cyberowca i Cyberowca rozmnażają się na (9, 6)
+Cyberowca i Cyberowca rozmnażają się na (0, 9)
+Cyberowca przesunęło się na (7, 4)
+Cyberowca przesunęło się na (1, 7)
+Cyberowca przesunęło się na (2, 6)
+Cyberowca i Cyberowca rozmnażają się na (8, 4)
+Cyberowca przesunęło się na (4, 11)
+Cyberowca i Cyberowca rozmnażają się na (1, 11)
+Cyberowca i Cyberowca rozmnażają się na (9, 10)
+Cyberowca i Cyberowca rozmnażają się na (4, 10)
+Cyberowca i Cyberowca rozmnażają się na (6, 4)
+Cyberowca i Cyberowca rozmnażają się na (7, 5)
+Cyberowca i Cyberowca rozmnażają się na (2, 7)
+Cyberowca przesunęło się na (3, 6)
+Cyberowca przesunęło się na (3, 7)
+Cyberowca przesunęło się na (7, 3)
+Cyberowca przesunęło się na (1, 6)
+Cyberowca i Cyberowca rozmnażają się na (2, 5)
+Cyberowca i Cyberowca rozmnażają się na (9, 5)
+Cyberowca i Cyberowca rozmnażają się na (1, 7)
+Cyberowca i Cyberowca rozmnażają się na (3, 5)
+Cyberowca i Cyberowca rozmnażają się na (4, 4)
+Cyberowca przesunęło się na (0, 10)
+Cyberowca przesunęło się na (8, 3)
+Cyberowca i Cyberowca rozmnażają się na (3, 8)
+Cyberowca i Cyberowca rozmnażają się na (0, 9)
+Cyberowca przesunęło się na (6, 3)
+Cyberowca przesunęło się na (1, 5)
+Cyberowca i Cyberowca rozmnażają się na (1, 6)
+Cyberowca i Cyberowca rozmnażają się na (8, 4)
+Cyberowca przesunęło się na (0, 8)
+Cyberowca i Cyberowca rozmnażają się na (5, 3)
+Cyberowca i Cyberowca rozmnażają się na (0, 11)
+Cyberowca przesunęło się na (9, 3)
+Cyberowca przesunęło się na (7, 4)
+Cyberowca i Cyberowca rozmnażają się na (2, 4)
+Cyberowca i Cyberowca rozmnażają się na (9, 4)
+Cyberowca przesunęło się na (0, 7)
+Cyberowca przesunęło się na (3, 4)
+Cyberowca i Cyberowca rozmnażają się na (4, 3)
+Cyberowca i Cyberowca rozmnażają się na (6, 4)
+Cyberowca i Cyberowca rozmnażają się na (1, 8)
+Cyberowca i Cyberowca rozmnażają się na (3, 5)
+Cyberowca i Cyberowca rozmnażają się na (6, 2)
+Cyberowca przesunęło się na (1, 4)
+Cyberowca przesunęło się na (7, 3)
+Cyberowca i Cyberowca rozmnażają się na (7, 4)
+Cyberowca przesunęło się na (1, 7)
+Cyberowca i Cyberowca rozmnażają się na (1, 5)
+Cyberowca i Cyberowca rozmnażają się na (0, 6)
+Cyberowca i Cyberowca rozmnażają się na (3, 3)
+Cyberowca i Cyberowca rozmnażają się na (8, 3)
+Cyberowca i Cyberowca rozmnażają się na (5, 2)
+Cyberowca i Cyberowca rozmnażają się na (2, 3)
+Cyberowca przesunęło się na (4, 2)
+Cyberowca i Cyberowca rozmnażają się na (2, 7)
+Cyberowca i Cyberowca rozmnażają się na (1, 3)
+Cyberowca przesunęło się na (9, 2)
+Cyberowca przesunęło się na (7, 2)
+Cyberowca przesunęło się na (4, 3)
+Cyberowca przesunęło się na (9, 3)
+Cyberowca przesunęło się na (4, 1)
+Cyberowca i Cyberowca rozmnażają się na (6, 1)
+Cyberowca i Cyberowca rozmnażają się na (7, 3)
+Cyberowca i Cyberowca rozmnażają się na (0, 5)
+Cyberowca i Cyberowca rozmnażają się na (3, 2)
+Cyberowca przesunęło się na (8, 2)
+Cyberowca i Cyberowca rozmnażają się na (5, 1)
+Cyberowca i Cyberowca rozmnażają się na (2, 2)
+Cyberowca przesunęło się na (0, 4)
+Cyberowca i Cyberowca rozmnażają się na (4, 4)
+Cyberowca i Cyberowca rozmnażają się na (9, 1)
+Cyberowca i Cyberowca rozmnażają się na (7, 1)
+Cyberowca i Cyberowca rozmnażają się na (9, 4)
+Cyberowca i Cyberowca rozmnażają się na (4, 2)
+Cyberowca i Cyberowca rozmnażają się na (8, 3)
+Cyberowca i Cyberowca rozmnażają się na (1, 4)
+Cyberowca i Cyberowca rozmnażają się na (4, 0)
+Cyberowca i Cyberowca rozmnażają się na (8, 1)
+Cyberowca przesunęło się na (1, 2)
+Cyberowca przesunęło się na (6, 0)
+Cyberowca i Cyberowca rozmnażają się na (3, 1)
+Cyberowca i Cyberowca rozmnażają się na (6, 1)
+Cyberowca i Cyberowca rozmnażają się na (2, 1)
+Cyberowca i Cyberowca rozmnażają się na (0, 3)
+Cyberowca i Cyberowca rozmnażają się na (1, 3)
+Cyberowca i Cyberowca rozmnażają się na (1, 1)
+Cyberowca przesunęło się na (7, 0)
+Cyberowca i Cyberowca rozmnażają się na (5, 0)
+Cyberowca i Cyberowca rozmnażają się na (9, 0)
+Cyberowca przesunęło się na (3, 0)
+Cyberowca przesunęło się na (8, 0)
+Cyberowca i Cyberowca rozmnażają się na (6, 0)
+Cyberowca przesunęło się na (2, 0)
+Cyberowca i Cyberowca rozmnażają się na (4, 0)
+Cyberowca i Cyberowca rozmnażają się na (8, 1)
+Cyberowca przesunęło się na (0, 2)
+Cyberowca przesunęło się na (2, 1)
+Cyberowca i Cyberowca rozmnażają się na (1, 2)
+Cyberowca przesunęło się na (0, 1)
+Cyberowca i Cyberowca rozmnażają się na (2, 2)
+Cyberowca i Cyberowca rozmnażają się na (1, 1)
+Cyberowca i Cyberowca rozmnażają się na (1, 0)
+Cyberowca przesunęło się na (0, 0)
+Cyberowca przesunęło się na (0, 1)
+Cyberowca i Cyberowca rozmnażają się na (0, 2)

@@ -1,3 +1,5 @@
+from pyparsing import empty
+
 from symulacja.classes.organizmy.zwierze import Zwierze
 
 
@@ -10,6 +12,8 @@ class Cyberowca(Zwierze):
 
     def rysowanie(self):
         return "Y"  # symbol na planszy
+    def dodaj_potomka(self, new_x, new_y):
+        return Cyberowca(new_x,new_y,self.swiat)
 
     def znajdz_barszcz(self):
         barszcze = [
@@ -26,6 +30,10 @@ class Cyberowca(Zwierze):
 
     def akcja(self):
         cel = self.znajdz_barszcz()
+        if cel == None:
+            super().akcja()
+            return
+
         dx, dy = 0, 0
 
         if cel:
