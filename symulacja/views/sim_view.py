@@ -85,7 +85,7 @@ class SimView(Frame):
             self.swiat = SwiatKwadratowy(self.canvas, self.log_window,self.controller.settings)
             self.load_world(self.lvl_path)
         elif self.controller.settings.map_type =='hex':
-            self.swiat = SwiatHex(self.canvas, self.log_window)
+            self.swiat = SwiatHex(self.canvas, self.log_window, self.controller.settings)
         else:
             raise ValueError("Unknown map type selected.")
 
