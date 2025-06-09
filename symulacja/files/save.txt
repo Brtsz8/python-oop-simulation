@@ -1,16 +1,20 @@
 Win
-Wilk 5 4 9
-Wilk 1 8 9
-Wilk 5 7 9
-Wilk 8 2 9
+Owca 1 2 4
+Owca 0 4 4
+Czlowiek 7 5 5 1 2 0
 LogWindow
-Dodano Wilk na (4, 4)
-Dodano Wilk na (2, 7)
-Wilk przesunęło się na (4, 3)
-Dodano Wilk na (6, 7)
-Wilk przesunęło się na (4, 4)
-Wilk przesunęło się na (2, 8)
-Dodano Wilk na (8, 2)
-Wilk przesunęło się na (5, 4)
-Wilk przesunęło się na (1, 8)
-Wilk przesunęło się na (5, 7)
+Dodano Czlowiek na (8, 4)
+Owca przesunęło się na (1, 0)
+Owca przesunęło się na (2, 2)
+Owca przesunęło się na (0, 0)
+Owca przesunęło się na (2, 3)
+Tarcza Azura aktywowana!
+Owca przesunęło się na (0, 1)
+Owca przesunęło się na (2, 4)
+Człowiek przesuwa się na (8, 5)
+Owca przesunęło się na (1, 1)
+Owca przesunęło się na (1, 4)
+Człowiek przesuwa się na (7, 5)
+Owca przesunęło się na (1, 2)
+Owca przesunęło się na (0, 4)
+Umiejętność już aktywna!

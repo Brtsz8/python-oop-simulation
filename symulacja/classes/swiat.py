@@ -94,7 +94,10 @@ class Swiat(ABC):
         with open(file_path, 'w') as file:
             file.write("Win\n")
             for organizm in self.organizmy:
-                file.write(f"{organizm.nazwa()} {organizm.get_pozycja_x()} {organizm.get_pozycja_y()} {organizm.get_sila()}\n")
+                line = f"{organizm.nazwa()} {organizm.get_pozycja_x()} {organizm.get_pozycja_y()} {organizm.get_sila()}"
+                if organizm.nazwa() == "Czlowiek":
+                    line += f" {int(organizm.get_umiejetnosc_aktywna())} {organizm.get_dlugosc_umiejetnosci()} {organizm.get_dlugosc_regeneracji()}"
+                file.write(line + "\n")
             file.write("LogWindow\n")
             for log in self.logs:
                 file.write(log + "\n")
@@ -102,20 +105,34 @@ class Swiat(ABC):
     def load(self, file_path):
         self.organizmy.clear()
         self.logs.clear()
+
         with open(file_path, 'r') as file:
             lines = file.readlines()
 
         i = 1
         while i < len(lines) and lines[i].strip() != "LogWindow":
             parts = lines[i].split()
-            nazwa, x, y, sila = parts[0], int(parts[1]), int(parts[2]), int(parts[3])
+            nazwa = parts[0]
+            x, y, sila = int(parts[1]), int(parts[2]), int(parts[3])
+
             organizm = self._stworz_organizm_po_nazwie(nazwa, x, y)
             if organizm:
                 organizm.set_sila(sila)
+
+                # Specjalna obsługa Człowieka
+                if nazwa == "Czlowiek" and len(parts) >= 7:
+                    umiejetnosc = bool(int(parts[4]))
+                    dlugosc_umiejetnosci = int(parts[5])
+                    dlugosc_regeneracji = int(parts[6])
+
+                    organizm.set_umiejetnosc_aktywna(umiejetnosc)
+                    organizm.set_dlugosc_umiejetnosci(dlugosc_umiejetnosci)
+                    organizm.set_dlugosc_regeneracji(dlugosc_regeneracji)
+
                 self.nowy_organizm(organizm)
             i += 1
 
-        for log in lines[i+1:]:
+        for log in lines[i + 1:]:
             if log.strip():
                 self.logs.append(log.strip())
 

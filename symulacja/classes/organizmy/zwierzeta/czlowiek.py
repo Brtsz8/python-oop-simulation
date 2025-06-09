@@ -8,6 +8,24 @@ class Czlowiek(Zwierze):
         self.dlugosc_umiejetnosci = 0
         self.dlugosc_regeneracji = 0
 
+    def get_umiejetnosc_aktywna(self):
+        return self.umiejetnosc_aktywna
+
+    def get_dlugosc_umiejetnosci(self):
+        return self.dlugosc_umiejetnosci
+
+    def get_dlugosc_regeneracji(self):
+        return self.dlugosc_regeneracji
+
+    def set_umiejetnosc_aktywna(self, aktywnosc):
+        self.umiejetnosc_aktywna = aktywnosc
+
+    def set_dlugosc_umiejetnosci(self, dlugosc):
+        self.dlugosc_umiejetnosci = dlugosc
+
+    def set_dlugosc_regeneracji(self, dlugosc):
+        self.dlugosc_regeneracji = dlugosc
+
     def rysowanie(self):
         return "C"
 
