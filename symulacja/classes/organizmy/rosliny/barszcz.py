@@ -35,7 +35,8 @@ class Barszcz(Roslina):
         log_entries = []
         x, y = self.pozycja_x, self.pozycja_y
 
-        deltas = [(x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)]
+        #deltas = [(x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)]
+        deltas = self.swiat.get_deltas(self.pozycja_x,self.pozycja_y)
         for new_x, new_y in deltas:
             if self.is_in_bounds(new_x, new_y):
                 sasiad = self.swiat.find_organism_at(new_x, new_y)

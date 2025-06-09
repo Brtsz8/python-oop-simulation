@@ -56,7 +56,8 @@ class Organizm:
         return 0 <= x < max_x and 0 <= y < max_y
 
     def znajdz_wolne_pole_obok(self) -> Tuple[int, int]:
-        dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+        #dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+        dirs = self.swiat.get_dirs(self.pozycja_x)
         random.shuffle(dirs)  # randomize directions
 
         for dx, dy in dirs:

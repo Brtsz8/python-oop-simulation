@@ -83,3 +83,23 @@ class SwiatHex(Swiat):
             "Barszcz_Sosnowskiego": "darkgreen",
         }
         return colors.get(nazwa, "black")
+
+    def get_dirs(self, x = None):
+        if x % 2 == 0:
+            return [(-1, 0), (0, -1), (0, 1), (1, 0), (-1, 1), (1, 1)]
+        else:
+            return [(-1, 0), (0, -1), (0, 1), (1, 0), (-1, -1), (1, -1)]
+
+    def get_deltas(self, x: int, y: int) -> list[tuple[int, int]]:
+        if x % 2 == 0:
+            return [
+                (x - 1, y), (x + 1, y),
+                (x, y - 1), (x, y + 1),
+                (x - 1, y + 1), (x + 1, y + 1),
+            ]
+        else:
+            return [
+                (x - 1, y), (x + 1, y),
+                (x, y - 1), (x, y + 1),
+                (x - 1, y - 1), (x + 1, y - 1),
+            ]

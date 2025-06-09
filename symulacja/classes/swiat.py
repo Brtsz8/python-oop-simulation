@@ -145,3 +145,14 @@ class Swiat(ABC):
     @abstractmethod
     def rysuj_swiat(self):
         pass
+
+    def get_dirs(self, x = None):
+        return [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+    def get_deltas(self, x: int, y: int) -> list[tuple[int, int]]:
+        return [
+            (x, y - 1),  # góra
+            (x, y + 1),  # dół
+            (x - 1, y),  # lewo
+            (x + 1, y),  # prawo
+        ]
