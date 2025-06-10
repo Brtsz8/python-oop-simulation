@@ -113,7 +113,7 @@ class SimView(Frame):
         nazwa = self.selected_organizm.get()
 
         organizm = self.stworz_organizm(nazwa, x, y)
-        if organizm:
+        if organizm and organizm.is_in_bounds(x,y):
             self.swiat.nowy_log(f"Dodano {nazwa} na ({x}, {y})")
             self.swiat.nowy_organizm(organizm)
             self.swiat.wykonaj_ture()

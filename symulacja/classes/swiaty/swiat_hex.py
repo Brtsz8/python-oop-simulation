@@ -103,3 +103,37 @@ class SwiatHex(Swiat):
                 (x, y - 1), (x, y + 1),
                 (x - 1, y - 1), (x + 1, y - 1),
             ]
+    def cube_to_oddq(self,x, z):
+        col = x
+        row = z + (x - (x & 1)) // 2
+        return col, row
+
+    def pixel_to_hex(self,x, y, size):
+        # Pointy-topped hex layout — odd-q offset
+        width = 3 / 2 * size
+        height = math.sqrt(3) * size
+
+        q = (x * 2 / 3) / size
+        r = (-x / 3 + math.sqrt(3) / 3 * y) / size
+
+        return self.cube_round(q, r, -q - r)
+
+    def cube_round(self,x, y, z):
+        rx = round(x)
+        ry = round(y)
+        rz = round(z)
+
+        dx = abs(rx - x)
+        dy = abs(ry - y)
+        dz = abs(rz - z)
+
+        if dx > dy and dx > dz:
+            rx = -ry - rz
+        elif dy > dz:
+            ry = -rx - rz
+        else:
+            rz = -rx - ry
+
+        return self.cube_to_oddq(rx, rz)
+
+
