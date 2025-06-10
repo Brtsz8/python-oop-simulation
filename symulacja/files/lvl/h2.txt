@@ -1,0 +1,11 @@
+Settings 10 12 40 hex
+Win
+Wilk 1 1 9
+Wilk 1 0 9
+Mlecz 7 11 0
+Mlecz 5 9 0
+Mlecz 7 9 0
+Mlecz 7 10 0
+Mlecz 5 8 0
+Mlecz 4 8 0
+LogWindow

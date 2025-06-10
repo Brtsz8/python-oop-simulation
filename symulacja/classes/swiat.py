@@ -23,6 +23,7 @@ class Swiat(ABC):
         self.logs = []
         self.top_log = 0
         self.command = None
+        self.settings = settings
         self.grid_width = settings.cell_size * settings.width
         self.grid_height = settings.cell_size * settings.height
         self.cell_size = settings.cell_size
@@ -92,11 +93,15 @@ class Swiat(ABC):
 
     def save(self, file_path):
         with open(file_path, 'w') as file:
+            # Zapis ustawień planszy
+            file.write(
+                f"Settings {self.settings.width} {self.settings.height} {self.settings.cell_size} {self.settings.map_type}\n")
+
             file.write("Win\n")
             for organizm in self.organizmy:
                 line = f"{organizm.nazwa()} {organizm.get_pozycja_x()} {organizm.get_pozycja_y()} {organizm.get_sila()}"
                 if organizm.nazwa() == "Czlowiek":
-                    line += f" {int(organizm.get_umiejetnosc_aktywna())} {organizm.get_dlugosc_umiejetnosci()} {organizm.get_dlugosc_regeneracji()}"
+                    line += f" {int(organizm.getUmiejetnoscAktywna())} {organizm.getDlugoscUmiejetnosci()} {organizm.getDlugoscRegeneracji()}"
                 file.write(line + "\n")
             file.write("LogWindow\n")
             for log in self.logs:
@@ -109,8 +114,21 @@ class Swiat(ABC):
         with open(file_path, 'r') as file:
             lines = file.readlines()
 
+        # Wczytaj ustawienia z pierwszej linii
+        if lines[0].startswith("Settings"):
+            parts = lines[0].split()
+            self.settings.width = int(parts[1])
+            self.settings.height = int(parts[2])
+            self.settings.cell_size = int(parts[3])
+            self.settings.map_type = parts[4]
+        else:
+            raise ValueError("Brak ustawień planszy w pliku!")
+
         i = 1
         while i < len(lines) and lines[i].strip() != "LogWindow":
+            if lines[i].strip() == "Win":
+                i += 1
+                continue
             parts = lines[i].split()
             nazwa = parts[0]
             x, y, sila = int(parts[1]), int(parts[2]), int(parts[3])
@@ -119,15 +137,10 @@ class Swiat(ABC):
             if organizm:
                 organizm.set_sila(sila)
 
-                # Specjalna obsługa Człowieka
                 if nazwa == "Czlowiek" and len(parts) >= 7:
-                    umiejetnosc = bool(int(parts[4]))
-                    dlugosc_umiejetnosci = int(parts[5])
-                    dlugosc_regeneracji = int(parts[6])
-
-                    organizm.set_umiejetnosc_aktywna(umiejetnosc)
-                    organizm.set_dlugosc_umiejetnosci(dlugosc_umiejetnosci)
-                    organizm.set_dlugosc_regeneracji(dlugosc_regeneracji)
+                    organizm.setUmiejetnoscAktywna(bool(int(parts[4])))
+                    organizm.setDlugoscUmiejetnosci(int(parts[5]))
+                    organizm.setDlugoscRegeneracji(int(parts[6]))
 
                 self.nowy_organizm(organizm)
             i += 1

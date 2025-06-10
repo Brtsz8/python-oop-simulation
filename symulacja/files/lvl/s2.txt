@@ -1,0 +1,21 @@
+Settings 10 12 40 square
+Win
+Wilk 7 10 9
+Owca 2 1 4
+Owca 0 2 4
+Owca 0 1 4
+Owca 1 2 4
+Owca 0 0 4
+Owca 1 0 4
+Owca 1 1 4
+Owca 0 3 4
+Owca 1 4 4
+Owca 3 0 4
+Trawa 0 11 0
+Trawa 9 0 0
+Trawa 0 10 0
+Trawa 1 11 0
+Owca 2 2 4
+Owca 3 1 4
+Trawa 2 11 0
+LogWindow
